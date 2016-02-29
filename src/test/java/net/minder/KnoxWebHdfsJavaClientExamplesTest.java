@@ -131,7 +131,7 @@ public class KnoxWebHdfsJavaClientExamplesTest {
     connection = createHttpUrlConnection( redirect );
     input = connection.getInputStream();
     assertThat( IOUtils.toString( input ), is( data ) );
-    output.close();
+    input.close();
     connection.disconnect();
 
   }
